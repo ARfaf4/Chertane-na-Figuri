@@ -18,7 +18,7 @@ namespace Chertane_na_Figuri
         {
             InitializeComponent();
         }
-        
+        Thread thread;
         private void button1_Click(object sender, EventArgs e) //triugulnik
         {
            
@@ -30,8 +30,9 @@ namespace Chertane_na_Figuri
         }
 
         private void RectangleBtn_Click(object sender, EventArgs e) //pravougulnik
-        {
-
+        {            
+            thread = new Thread(DrawRectangle);
+            thread.Start();
         }
         private void DrawRectangle()
         {
