@@ -31,12 +31,12 @@
             this.TriangleBtn = new System.Windows.Forms.Button();
             this.CircleBtn = new System.Windows.Forms.Button();
             this.RectangleBtn = new System.Windows.Forms.Button();
-            this.BonusBtn = new System.Windows.Forms.Button();
+            this.StopBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TriangleBtn
             // 
-            this.TriangleBtn.Location = new System.Drawing.Point(59, 337);
+            this.TriangleBtn.Location = new System.Drawing.Point(62, 540);
             this.TriangleBtn.Name = "TriangleBtn";
             this.TriangleBtn.Size = new System.Drawing.Size(106, 44);
             this.TriangleBtn.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // CircleBtn
             // 
-            this.CircleBtn.Location = new System.Drawing.Point(208, 337);
+            this.CircleBtn.Location = new System.Drawing.Point(206, 540);
             this.CircleBtn.Name = "CircleBtn";
             this.CircleBtn.Size = new System.Drawing.Size(106, 44);
             this.CircleBtn.TabIndex = 1;
@@ -57,7 +57,7 @@
             // RectangleBtn
             // 
             this.RectangleBtn.AutoEllipsis = true;
-            this.RectangleBtn.Location = new System.Drawing.Point(359, 337);
+            this.RectangleBtn.Location = new System.Drawing.Point(353, 540);
             this.RectangleBtn.Name = "RectangleBtn";
             this.RectangleBtn.Size = new System.Drawing.Size(106, 44);
             this.RectangleBtn.TabIndex = 2;
@@ -65,21 +65,22 @@
             this.RectangleBtn.UseVisualStyleBackColor = true;
             this.RectangleBtn.Click += new System.EventHandler(this.RectangleBtn_Click);
             // 
-            // BonusBtn
+            // StopBtn
             // 
-            this.BonusBtn.Location = new System.Drawing.Point(501, 337);
-            this.BonusBtn.Name = "BonusBtn";
-            this.BonusBtn.Size = new System.Drawing.Size(106, 44);
-            this.BonusBtn.TabIndex = 3;
-            this.BonusBtn.Text = "Bonus";
-            this.BonusBtn.UseVisualStyleBackColor = true;
+            this.StopBtn.Location = new System.Drawing.Point(500, 540);
+            this.StopBtn.Name = "StopBtn";
+            this.StopBtn.Size = new System.Drawing.Size(106, 44);
+            this.StopBtn.TabIndex = 3;
+            this.StopBtn.Text = "Stop";
+            this.StopBtn.UseVisualStyleBackColor = true;
+            this.StopBtn.Click += new System.EventHandler(this.StopBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 428);
-            this.Controls.Add(this.BonusBtn);
+            this.ClientSize = new System.Drawing.Size(640, 617);
+            this.Controls.Add(this.StopBtn);
             this.Controls.Add(this.RectangleBtn);
             this.Controls.Add(this.CircleBtn);
             this.Controls.Add(this.TriangleBtn);
@@ -94,7 +95,7 @@
         private System.Windows.Forms.Button TriangleBtn;
         private System.Windows.Forms.Button CircleBtn;
         private System.Windows.Forms.Button RectangleBtn;
-        private System.Windows.Forms.Button BonusBtn;
+        private System.Windows.Forms.Button StopBtn;
     }
 }
 
