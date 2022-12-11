@@ -28,7 +28,8 @@ namespace Chertane_na_Figuri
 
         private void button2_Click(object sender, EventArgs e) //krug
         {
-            
+            thread = new Thread(DrawCircle);
+            thread.Start();
         }
 
         private void RectangleBtn_Click(object sender, EventArgs e) //pravougulnik
