@@ -14,11 +14,13 @@ namespace Chertane_na_Figuri
 {
     public partial class Form1 : Form
     {
+        
+        Random random = new Random();
+        Thread thread;
         public Form1()
         {
             InitializeComponent();
-        }
-        Thread thread;
+        }      
         private void button1_Click(object sender, EventArgs e) //triugulnik
         {
            
@@ -26,13 +28,18 @@ namespace Chertane_na_Figuri
 
         private void button2_Click(object sender, EventArgs e) //krug
         {
-
+            
         }
 
         private void RectangleBtn_Click(object sender, EventArgs e) //pravougulnik
         {            
             thread = new Thread(DrawRectangle);
             thread.Start();
+        }
+        private void StopBtn_Click(object sender, EventArgs e)
+        {
+            thread.Abort(true);
+            MessageBox.Show("Thread have been stopped");
         }
         private void DrawRectangle()
         {
@@ -42,25 +49,33 @@ namespace Chertane_na_Figuri
                     int y = new Random().Next(1, 656);
                     int a = new Random().Next(1, 400);
                     int b = new Random().Next(1, 400);
-                    if (x + a <= 656 && y + b <= 600)
+                    if (x + a <= 600 && y + b <= 600)
                     {
-                        Color red = Color.FromArgb(255, 255, 0, 0);
-                        Pen redPen = new Pen(red);
-                        redPen.Width = 5;
-                        this.CreateGraphics().DrawRectangle(redPen, x, y, a, b);
+                        Color color = Color.FromArgb(random.Next(0,255), random.Next(0,255), random.Next(0,255));
+                        Pen Pen = new Pen(color);
+                        Pen.Width = 5;
+                        this.CreateGraphics().DrawRectangle(Pen, x, y, a, b);
                         Thread.Sleep(3000);
-                    }
-                  
-                }
-            
-            
-            
-        }   
-
-        private void StopBtn_Click(object sender, EventArgs e)
-        {
-            thread.Abort(true);
-            MessageBox.Show("Thread have been stopped");
+                    }                  
+                }           
         }
+        private void DrawCircle()
+        {
+            for (int i = 0; i < 50; i--)
+            {
+                int x = new Random().Next(1, 656);
+                int y = new Random().Next(1, 656);
+                int r = new Random().Next(1, 400);
+                if (r + x <= 656 && r + y <= 600)
+                {
+                    Color color = Color.FromArgb(random.Next(0, 255), random.Next(0, 255), random.Next(0, 255));
+                    Pen Pen = new Pen(color);
+                    Pen.Width = 5;
+                    this.CreateGraphics().DrawEllipse(Pen, x, y, r, r);
+                    Thread.Sleep(4000);
+                }
+            }          
+        }
+
     }
 }
