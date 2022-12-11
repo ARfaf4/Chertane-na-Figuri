@@ -23,7 +23,8 @@ namespace Chertane_na_Figuri
         }      
         private void button1_Click(object sender, EventArgs e) //triugulnik
         {
-           
+            thread = new Thread(DrawTriangle);
+            thread.Start();
         }
 
         private void button2_Click(object sender, EventArgs e) //krug
