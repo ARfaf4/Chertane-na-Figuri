@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Chertane_na_Figuri
 {
@@ -17,12 +18,17 @@ namespace Chertane_na_Figuri
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //triugulnik
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) //krug
+        {
+
+        }
+
+        private void RectangleBtn_Click(object sender, EventArgs e) //pravougulnik
         {
 
         }
