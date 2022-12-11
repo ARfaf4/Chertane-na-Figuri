@@ -59,7 +59,8 @@ namespace Chertane_na_Figuri
 
         private void StopBtn_Click(object sender, EventArgs e)
         {
-            
+            thread.Abort(true);
+            MessageBox.Show("Thread have been stopped");
         }
     }
 }
