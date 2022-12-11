@@ -77,6 +77,23 @@ namespace Chertane_na_Figuri
                 }
             }          
         }
+        private void DrawTriangle()
+        {
+            for (int i = 0; i < 50; i--)
+            {
+                Color color = Color.FromArgb(random.Next(0, 255), random.Next(0, 255), random.Next(0, 255));
+                Pen Pen = new Pen(color);
+                Pen.Width = 5;
+                Point point = new Point(random.Next(1, 606), random.Next(1, 606));
+                Point point1 = new Point(random.Next(1, 606), random.Next(1, 606));
+                Point point2 = new Point(random.Next(1, 606), random.Next(1, 606));
+                this.CreateGraphics().DrawLine(Pen, point, point1);
+                this.CreateGraphics().DrawLine(Pen, point, point2);
+                this.CreateGraphics().DrawLine(Pen, point1, point2);
+                Thread.Sleep(2000);
+            }
+            
+        }
 
     }
 }
